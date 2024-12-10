@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2024-present Proxima Fusion GmbH <info@proximafusion.com>
 #
 # SPDX-License-Identifier: MIT
-# Basic execution tests for SIMSOPT-compatible Python wrapper of VMEC++
+"""Basic execution tests for SIMSOPT-compatible Python wrapper of VMEC++."""
 
 from pathlib import Path
 
