@@ -8,6 +8,7 @@
 
 #include "absl/status/status.h"
 #include "vmecpp/common/composed_types_definition/composed_types.pb.h"
+#include "vmecpp/common/composed_types_definition/composed_types.h"
 #include "vmecpp/common/magnetic_configuration_definition/magnetic_configuration.h"
 
 namespace magnetics {
