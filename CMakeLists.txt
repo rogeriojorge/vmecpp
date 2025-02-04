@@ -52,11 +52,11 @@ target_link_libraries(vmecpp_core PRIVATE ${HDF5_CXX_LIBRARIES} ${HDF5_LIBRARIES
 target_link_libraries(vmecpp_core PRIVATE netCDF::netcdf)
 target_link_libraries(vmecpp_core PRIVATE nlohmann_json::nlohmann_json)
 if(APPLE)
-  # We assume we are building against dependencies installed via homebrew.
+  # We assume we are building against dependencies installed via macports.
   # These must be public for the _vmecpp target to pick them up transitively.
-  target_include_directories(vmecpp_core PUBLIC /opt/homebrew/opt/lapack/include)
-  target_link_directories(vmecpp_core PUBLIC /opt/homebrew/opt/lapack/lib)
-  target_link_libraries(vmecpp_core PUBLIC LAPACK::LAPACK -llapacke)
+  target_include_directories(vmecpp_core PUBLIC /opt/local/include)
+  target_link_directories(vmecpp_core PUBLIC /opt/local/lib)
+  target_link_libraries(vmecpp_core PUBLIC LAPACK::LAPACK -llapack)
 else()
   target_link_libraries(vmecpp_core PRIVATE LAPACK::LAPACK -llapacke)
 endif()
